@@ -82,5 +82,4 @@ function BarChart({ data }) {
         </svg>
     );
 }
-
 export default BarChart;
