@@ -1,0 +1,79 @@
+[
+  {
+    "date": "2016-01-01",
+    "name": "Google",
+    "water_consumption": 89.29
+  },
+  {
+    "date": "2017-01-01",
+    "name": "Google",
+    "water_consumption": 109.68
+  },
+  {
+    "date": "2018-01-01",
+    "name": "Google",
+    "water_consumption": 148.93
+  },
+  {
+    "date": "2019-01-01",
+    "name": "Google",
+    "water_consumption": 121.86
+  },
+  {
+    "date": "2020-01-01",
+    "name": "Google",
+    "water_consumption": 133.89
+  },
+
+  {
+    "date": "2016-01-01",
+    "name": "Oracle",
+    "water_consumption": 30.63
+  },
+  {
+    "date": "2017-01-01",
+    "name": "Oracle",
+    "water_consumption": 29.38
+  },
+  {
+    "date": "2018-01-01",
+    "name": "Oracle",
+    "water_consumption": 28.13
+  },
+  {
+    "date": "2019-01-01",
+    "name": "Oracle",
+    "water_consumption": 27.38
+  },
+  {
+    "date": "2020-01-01",
+    "name": "Oracle",
+    "water_consumption": 24.38
+  },
+
+  {
+    "date": "2016-01-01",
+    "name": "AWS",
+    "water_consumption": 33.97
+  },
+  {
+    "date": "2017-01-01",
+    "name": "AWS",
+    "water_consumption": 33.97
+  },
+  {
+    "date": "2018-01-01",
+    "name": "AWS",
+    "water_consumption": 33.97
+  },
+  {
+    "date": "2019-01-01",
+    "name": "AWS",
+    "water_consumption": 33.97
+  },
+  {
+    "date": "2020-01-01",
+    "name": "AWS",
+    "water_consumption": 33.97
+  }
+]

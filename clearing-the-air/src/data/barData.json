@@ -1,0 +1,6 @@
+[
+  { "year": 1, "efficiency": 24.3, "sales": 100 },
+  { "year": 2, "efficiency": 27.6, "sales": 61 },
+  { "year": 3, "efficiency": 28, "sales": 59 },
+  { "year": 4, "efficiency": 28.4, "sales": 65 }
+]
