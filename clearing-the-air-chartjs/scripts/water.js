@@ -9,7 +9,7 @@ googleGradient.addColorStop(1, 'rgba(0, 210, 255, 0.3')
 // TODO: Factor out to JSON
 const labelsWater = ['2016', '2017', '2018', '2019', '2020']
 const dataWater = {
-  labelsWater,
+  labels: labelsWater,
   datasets: [
     {
       data: [89.29, 109.68, 148.93, 121.86, 133.89],
@@ -35,7 +35,6 @@ const dataWater = {
       pointBackgroundColor: 'rgba(189, 195, 199)',
       tension: 0.4,
     },
-
     {
       data: [
         82.49554204, 74.63761438, 76.79782246, 81.35610884, 69.18246417,

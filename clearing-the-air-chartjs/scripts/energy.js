@@ -4,7 +4,7 @@ let delayedEnergy
 // TODO: Factor out to JSON
 const labelsEnergy = ['2016', '2017', '2018', '2019', '2020']
 const dataEnergy = {
-  labelsEnergy,
+  labels: labelsEnergy,
   datasets: [
     {
       data: [89.29, 109.68, 148.93, 121.86, 133.89],
