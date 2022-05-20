@@ -78,7 +78,7 @@ const configWater = {
         ) {
           delay = context.dataIndex * 300 + context.datasetIndex * 100
         }
-        return delayedWater
+        return delay
       },
     },
     scales: {

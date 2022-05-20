@@ -10,7 +10,6 @@ const dataEnergy = {
       data: [89.29, 109.68, 148.93, 121.86, 133.89],
       label: 'Google Cloud',
       fill: true,
-      backgroundColor: googleGradient,
       pointBackgroundColor: 'rgba(189, 195, 199)',
       tension: 0.4,
     },
