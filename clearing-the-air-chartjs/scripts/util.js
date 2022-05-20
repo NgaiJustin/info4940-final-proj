@@ -1,0 +1,5 @@
+const GOOGLE_COLOR = 'rgba(66, 133, 244, 0.9)'
+const IBM_COLOR = 'rgba(0, 0, 0, 0.9)'
+const ORACLE_COLOR = 'rgba(248, 0, 0, 0.9)'
+const AWS_COLOR = 'rgba(255,153,0, 0.9)'
+const DEFAULT_COLOR = 'rgba(5, 47, 95, 1)'

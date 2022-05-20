@@ -2,43 +2,22 @@ const ctxEnergy = document.getElementById('energy-consumption').getContext('2d')
 let delayedEnergy
 
 // TODO: Factor out to JSON
-const labelsEnergy = ['2016', '2017', '2018', '2019', '2020']
+const labelsEnergy = ['Google Cloud', 'IBM', 'Oracle', 'AWS', 'Global Avreage']
 const dataEnergy = {
   labels: labelsEnergy,
   datasets: [
     {
-      data: [89.29, 109.68, 148.93, 121.86, 133.89],
-      label: 'Google Cloud',
+      data: [1.105, 1.67, 1.41, 1.7, 1.57],
+      label: 'PUE',
       fill: true,
       pointBackgroundColor: 'rgba(189, 195, 199)',
-      tension: 0.4,
-    },
-    {
-      data: [30.63, 29.38, 28.13, 27.38, 24.38],
-      label: 'Oracle Cloud',
-      fill: true,
-      backgroundColor: '#f80000',
-      pointBackgroundColor: 'rgba(189, 195, 199)',
-      tension: 0.4,
-    },
-    {
-      data: [28.28, 36.83, 32.09, 33.97, 33.97],
-      label: 'Amazon (AWS)',
-      fill: true,
-      backgroundColor: '#FF9900',
-      pointBackgroundColor: 'rgba(189, 195, 199)',
-      tension: 0.4,
-    },
-
-    {
-      data: [
-        82.49554204, 74.63761438, 76.79782246, 81.35610884, 69.18246417,
-        57.7445761,
+      hoverBackgroundColor: [
+        GOOGLE_COLOR,
+        IBM_COLOR,
+        ORACLE_COLOR,
+        AWS_COLOR,
+        DEFAULT_COLOR,
       ],
-      label: 'Australia per 50,000 Capita',
-      fill: true,
-      backgroundColor: 'rgba(5, 47, 95, 1)',
-      pointBackgroundColor: 'rgba(189, 195, 199)',
       tension: 0.4,
     },
   ],
@@ -46,13 +25,13 @@ const dataEnergy = {
 
 // Configure Chart
 const configEnergy = {
-  type: 'line',
+  type: 'bar',
   data: dataEnergy,
   options: {
     plugins: {
       title: {
         display: true,
-        text: 'Energy Consumption',
+        text: 'Energy Efficiency',
       },
     },
     radius: 5,
@@ -78,7 +57,7 @@ const configEnergy = {
     scales: {
       y: {
         ticks: {
-          callback: value => value + 'M gallons',
+          callback: value => value + '',
         },
       },
     },
