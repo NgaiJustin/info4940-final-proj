@@ -61,6 +61,7 @@ function BarChart({ data }) {
         .attr('x', d => x(d.year))
         .attr('width', x.bandwidth())
         .attr('y', d => y1(d.sales))
+        .transition()
         .attr('height', d => y1(0) - y1(d.sales))
     },
     [data.length]
