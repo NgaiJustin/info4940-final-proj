@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<main>
+  <script>
+  window.onload = function () {
+
+  var chart = new CanvasJS.Chart("chartContainer", {
+  	animationEnabled: true,
+  	title:{
+  		text: "Percent RE By Type Google"
+  	},
+  	axisY :{
+  		// valueFormatString: "#0,.",
+      title: "Percentage RE",
+      maximum: 100,
+      minimum: 0
+      // intervalType:"year"
+  		// suffix: "k"
+  	},
+  	axisX: {
+  		title: "Year",
+      intervalType: "year",
+      interval:1
+  	},
+  	toolTip: {
+  		shared: true
+  	},
+  	data: [{
+  		type: "stackedArea",
+  		showInLegend: true,
+  		toolTipContent: "<span style=\"color:#9ed3f4\"><strong>{name}: </strong></span> {y}",
+  		name: "Grid",
+  		dataPoints: [
+  		{ x: 2016, y: 15.34 },
+  		{ x: 2017, y: 17.93 },
+  		{ x: 2018, y: 18.39 },
+  		{ x: 2019, y: 20.56 },
+  		{ x: 2020, y: 20.23 },
+  		]
+  	},
+  	{
+  		type: "stackedArea",
+  		name: "Contracted Purchases",
+  		toolTipContent: "<span style=\"color:#C0504E\"><strong>{name}: </strong></span> {y}<br><b>Total:<b> #total",
+  		showInLegend: true,
+      // color: "blue";
+  		dataPoints: [
+      { x: 2016, y: 45.38 },
+  		{ x: 2017, y: 82.70 },
+  		{ x: 2018, y: 81.61 },
+  		{ x: 2019, y: 79.37 },
+  		{ x: 2020, y: 79.77 },
+  		]
+  	}]
+  });
+  chart.render();
+
+  }
+  </script>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>

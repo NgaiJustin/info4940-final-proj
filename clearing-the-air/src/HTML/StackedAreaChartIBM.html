@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<main>
+  <script>
+  window.onload = function () {
+
+  var chart = new CanvasJS.Chart("chartContainer", {
+  	animationEnabled: true,
+  	title:{
+  		text: "Percent RE By Type IBM"
+  	},
+  	axisY :{
+  		// valueFormatString: "#0,.",
+      title: "Percentage RE",
+      maximum: 100,
+      minimum: 0
+      // intervalType:"year"
+  		// suffix: "k"
+  	},
+  	axisX: {
+  		title: "Year",
+      intervalType: "year",
+      interval:1
+  	},
+  	toolTip: {
+  		shared: true
+  	},
+  	data: [{
+  		type: "stackedArea",
+  		showInLegend: true,
+  		toolTipContent: "<span style=\"color:#4F81BC\"><strong>{name}: </strong></span> {y}",
+  		name: "Grid",
+  		dataPoints: [
+  		{ x: 2016, y: 19.10 },
+  		{ x: 2017, y: 18.50 },
+  		{ x: 2018, y: 18.60 },
+  		{ x: 2019, y: 22.00 },
+  		{ x: 2020, y: 16.00 },
+  		]
+  	},
+  	{
+  		type: "stackedArea",
+  		name: "Contracted Purchases",
+  		toolTipContent: "<span style=\"color:#C0504E\"><strong>{name}: </strong></span> {y}<br><b>Total:<b> #total",
+  		showInLegend: true,
+      // color: "blue";
+  		dataPoints: [
+      { x: 2016, y: 21.50 },
+  		{ x: 2017, y: 22.90 },
+  		{ x: 2018, y: 19.30 },
+  		{ x: 2019, y: 25.00 },
+  		{ x: 2020, y: 43.30 },
+  		]
+  	}]
+  });
+  chart.render();
+
+  }
+  </script>
+
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>
