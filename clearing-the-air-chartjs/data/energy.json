@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Google",
+    "PUE": 1.105
+  },
+  {
+    "name": "IBM",
+    "PUE": 1.67
+  },
+  {
+    "name": "Oracle",
+    "PUE": 1.41
+  },
+  {
+    "name": "AWS",
+    "PUE": 1.7
+  },
+  {
+    "name": "Global Average",
+    "PUE": 1.57
+  }
+]
