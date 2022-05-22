@@ -1,0 +1,79 @@
+[
+  {
+    "date": "2016-01-01",
+    "name": "Google",
+    "total_waste": 43058
+  },
+  {
+    "date": "2017-01-01",
+    "name": "Google",
+    "total_waste": 53363
+  },
+  {
+    "date": "2018-01-01",
+    "name": "Google",
+    "total_waste": 57113
+  },
+  {
+    "date": "2019-01-01",
+    "name": "Google",
+    "total_waste": 48126
+  },
+  {
+    "date": "2020-01-01",
+    "name": "Google",
+    "total_waste": 28864
+  },
+
+  {
+    "date": "2016-01-01",
+    "name": "IBM",
+    "total_waste": 20434
+  },
+  {
+    "date": "2017-01-01",
+    "name": "IBM",
+    "total_waste": 16852
+  },
+  {
+    "date": "2018-01-01",
+    "name": "IBM",
+    "total_waste": 15612
+  },
+  {
+    "date": "2019-01-01",
+    "name": "IBM",
+    "total_waste": 14464
+  },
+  {
+    "date": "2020-01-01",
+    "name": "IBM",
+    "total_waste": 10148
+  },
+
+  {
+    "date": "2016-01-01",
+    "name": "Oracle",
+    "total_waste": 2106
+  },
+  {
+    "date": "2017-01-01",
+    "name": "Oracle",
+    "total_waste": 1998
+  },
+  {
+    "date": "2018-01-01",
+    "name": "Oracle",
+    "total_waste": 2033
+  },
+  {
+    "date": "2019-01-01",
+    "name": "Oracle",
+    "total_waste": 1963
+  },
+  {
+    "date": "2020-01-01",
+    "name": "Oracle",
+    "total_waste": 621
+  }
+]
