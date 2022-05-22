@@ -76,8 +76,10 @@ const configLandfill = {
     },
     scales: {
       y: {
+        min: 80,
+        max: 100,
         ticks: {
-          callback: value => value + '',
+          callback: value => value + '%',
         },
       },
     },
