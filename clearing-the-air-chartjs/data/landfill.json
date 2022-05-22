@@ -1,0 +1,43 @@
+[
+  {
+    "date": "2017-01-01",
+    "name": "Google",
+    "landfill_diversion_rate": 91
+  },
+  {
+    "date": "2018-01-01",
+    "name": "Google",
+    "landfill_diversion_rate": 87
+  },
+  {
+    "date": "2019-01-01",
+    "name": "Google",
+    "landfill_diversion_rate": 90
+  },
+  {
+    "date": "2020-01-01",
+    "name": "Google",
+    "landfill_diversion_rate": 81
+  },
+
+  {
+    "date": "2017-01-01",
+    "name": "IBM",
+    "landfill_diversion_rate": 87.7
+  },
+  {
+    "date": "2018-01-01",
+    "name": "IBM",
+    "landfill_diversion_rate": 89.4
+  },
+  {
+    "date": "2019-01-01",
+    "name": "IBM",
+    "landfill_diversion_rate": 87.3
+  },
+  {
+    "date": "2020-01-01",
+    "name": "IBM",
+    "landfill_diversion_rate": 83.3
+  }
+]

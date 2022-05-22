@@ -1,21 +1,15 @@
-const ctx = document.getElementById('myChart').getContext('2d')
-let delayed
+const ctxWater = document.getElementById('water-consumption').getContext('2d')
+let delayedWater
 
 // Gradient Fill
-let googleGradient = ctx.createLinearGradient(0, 0, 0, 400)
+let googleGradient = ctxWater.createLinearGradient(0, 0, 0, 400)
 googleGradient.addColorStop(0, 'rgba(58, 123, 213, 1')
 googleGradient.addColorStop(1, 'rgba(0, 210, 255, 0.3')
-let oracleGradient = ctx.createLinearGradient(0, 0, 0, 400)
-oracleGradient.addColorStop(0, 'rgba(58, 123, 213, 1')
-oracleGradient.addColorStop(1, 'rgba(0, 210, 255, 0.3')
-let awsGradient = ctx.createLinearGradient(0, 0, 0, 400)
-oracleGradient.addColorStop(0, 'rgba(58, 123, 213, 1')
-oracleGradient.addColorStop(1, 'rgba(0, 210, 255, 0.3')
 
 // TODO: Factor out to JSON
-const labels = ['2016', '2017', '2018', '2019', '2020']
-const data = {
-  labels,
+const labelsWater = ['2016', '2017', '2018', '2019', '2020']
+const dataWater = {
+  labels: labelsWater,
   datasets: [
     {
       data: [89.29, 109.68, 148.93, 121.86, 133.89],
@@ -29,7 +23,7 @@ const data = {
       data: [30.63, 29.38, 28.13, 27.38, 24.38],
       label: 'Oracle Cloud',
       fill: true,
-      backgroundColor: '#f80000',
+      backgroundColor: ORACLE_COLOR,
       pointBackgroundColor: 'rgba(189, 195, 199)',
       tension: 0.4,
     },
@@ -37,11 +31,10 @@ const data = {
       data: [28.28, 36.83, 32.09, 33.97, 33.97],
       label: 'Amazon (AWS)',
       fill: true,
-      backgroundColor: '#FF9900',
+      backgroundColor: AWS_COLOR,
       pointBackgroundColor: 'rgba(189, 195, 199)',
       tension: 0.4,
     },
-
     {
       data: [
         82.49554204, 74.63761438, 76.79782246, 81.35610884, 69.18246417,
@@ -49,7 +42,7 @@ const data = {
       ],
       label: 'Australia per 50,000 Capita',
       fill: true,
-      backgroundColor: 'rgba(5, 47, 95, 1)',
+      backgroundColor: DEFAULT_COLOR,
       pointBackgroundColor: 'rgba(189, 195, 199)',
       tension: 0.4,
     },
@@ -57,9 +50,9 @@ const data = {
 }
 
 // Configure Chart
-const config = {
+const configWater = {
   type: 'line',
-  data: data,
+  data: dataWater,
   options: {
     plugins: {
       title: {
@@ -73,11 +66,15 @@ const config = {
     responsive: true,
     animation: {
       onComplete: () => {
-        delayed = true
+        delayedWater = true
       },
       delay: context => {
         let delay = 0
-        if (context.type === 'data' && context.mode === 'default' && !delayed) {
+        if (
+          context.type === 'data' &&
+          context.mode === 'default' &&
+          !delayedWater
+        ) {
           delay = context.dataIndex * 300 + context.datasetIndex * 100
         }
         return delay
@@ -92,4 +89,4 @@ const config = {
     },
   },
 }
-const myChart = new Chart(ctx, config)
+const waterChart = new Chart(ctxWater, configWater)

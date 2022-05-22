@@ -6,10 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clearing The Air</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    <div class="chart">
-      <canvas id="myChart"></canvas>
+    <div class="container-sm">
+      <div class="chart">
+        <canvas id="water-consumption"></canvas>
+      </div>
+      <div class="chart">
+        <canvas id="energy-consumption"></canvas>
+      </div>
+      <div class="chart">
+        <canvas id="total-waste"></canvas>
+      </div>
+      <div class="chart">
+        <canvas id="landfill-diversion"></canvas>
+      </div>
+      <div class="chart">
+        <canvas id="greenhouse-gas-goals"></canvas>
+      </div>
     </div>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"
@@ -17,6 +37,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script src="main.js"></script>
+    <script src="./scripts/util.js"></script>
+    <script src="./scripts/water.js"></script>
+    <script src="./scripts/energy.js"></script>
+    <script src="./scripts/landfill.js"></script>
+    <script src="./scripts/waste.js"></script>
+    <script src="./scripts/greenhouse-gas-goal.js"></script>
   </body>
 </html>
