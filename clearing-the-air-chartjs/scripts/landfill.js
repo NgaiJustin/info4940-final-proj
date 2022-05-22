@@ -24,6 +24,22 @@ const dataLandfill = {
       hoverBackgroundColor: IBM_COLOR,
       tension: 0.4,
     },
+    {
+      data: [null, null, null, null],
+      label: 'AWS',
+      fill: true,
+      backgroundColor: AWS_COLOR_LIGHT,
+      hoverBackgroundColor: AWS_COLOR,
+      tension: 0.4,
+    },
+    {
+      data: [null, null, null, null],
+      label: 'Oracle',
+      fill: true,
+      backgroundColor: ORACLE_COLOR_LIGHT,
+      hoverBackgroundColor: ORACLE_COLOR,
+      tension: 0.4,
+    },
   ],
 }
 
