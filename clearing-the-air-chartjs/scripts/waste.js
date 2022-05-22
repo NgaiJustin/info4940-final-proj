@@ -1,5 +1,11 @@
 const ctxWaste = document.getElementById('total-waste').getContext('2d')
+console.log(ctxWaste)
 let delayedWaste
+
+// Gradient Fill
+let googleGradient = ctxWaste.createLinearGradient(0, 0, 0, 400)
+googleGradient.addColorStop(0, 'rgba(58, 123, 213, 1')
+googleGradient.addColorStop(1, 'rgba(0, 210, 255, 0.3')
 
 // TODO: Factor out to JSON
 const labelsWaste = ['2016', '2017', '2018', '2019', '2020']
