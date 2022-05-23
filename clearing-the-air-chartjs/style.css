@@ -4,3 +4,10 @@
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
+
+.chart-sm {
+  position: relative;
+  height: 40vh;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
