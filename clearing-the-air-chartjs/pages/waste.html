@@ -14,12 +14,55 @@
     />
   </head>
   <body>
+    <nav class="navbar navbar-expand" style="background-color: #e3f2fd">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Clearing The Air</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./sourcing.html">Sourcing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./energy-water.html">Water & Energy</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./waste.html">Waste</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./future.html">Future</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <div class="container-sm">
       <div class="chart">
         <canvas id="total-waste"></canvas>
       </div>
       <div class="chart">
         <canvas id="landfill-diversion"></canvas>
+      </div>
+    </div>
+    <div class="card text-center">
+      <div class="card-footer text-muted">
+        Made by Jasmine Yu, Jenny Liu, Peter Huang & Justin Ngai — ChartJS &
+        Bootstrap
       </div>
     </div>
     <script
