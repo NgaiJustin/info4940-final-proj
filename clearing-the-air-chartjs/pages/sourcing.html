@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      window.onload = function () {
+        var chartContainerTotalPercentRE = new CanvasJS.Chart(
+          'chartContainerTotalPercentRE',
+          {
+            theme: 'light2',
+            animationEnabled: true,
+            title: {
+              text: '% Renewable Energy',
+            },
+            axisY: {
+              title: 'Percentage',
+              suffix: '%',
+            },
+            toolTip: {
+              shared: 'true',
+            },
+            legend: {
+              cursor: 'pointer',
+              itemclick: toggleDataSeriesPercentRE,
+            },
+            data: [
+              {
+                type: 'spline',
+                visible: true,
+                showInLegend: true,
+                name: 'Google',
+                dataPoints: [
+                  { label: '2016', y: 61 },
+                  { label: '2017', y: 100 },
+                  { label: '2018', y: 100 },
+                  { label: '2019', y: 100 },
+                  { label: '2020', y: 100 },
+                ],
+              },
+              {
+                type: 'spline',
+                showInLegend: true,
+                name: 'IBM',
+                dataPoints: [
+                  { label: '2016', y: 37 },
+                  { label: '2017', y: 27.4 },
+                  { label: '2018', y: 40 },
+                  { label: '2019', y: 50 },
+                  { label: '2020', y: 59.3 },
+                ],
+              },
+              {
+                type: 'spline',
+                showInLegend: true,
+                name: 'Oracle',
+                dataPoints: [
+                  { label: '2016', y: 29 },
+                  { label: '2017', y: 36 },
+                  { label: '2018', y: 62 },
+                  { label: '2019', y: 59 },
+                  { label: '2020', y: 56 },
+                ],
+              },
+              {
+                type: 'spline',
+                showInLegend: true,
+                name: 'Amazon',
+                dataPoints: [
+                  { label: '2016', y: 17 },
+                  { label: '2017', y: 34 },
+                  { label: '2018', y: 50 },
+                  { label: '2019', y: 42 },
+                  { label: '2020', y: 65 },
+                ],
+              },
+            ],
+          }
+        )
+        var chartContainerAreaChartGoogle = new CanvasJS.Chart(
+          'chartContainerAreaChartGoogle',
+          {
+            animationEnabled: true,
+            title: {
+              text: 'Percent RE By Type Google',
+            },
+            axisY: {
+              title: 'Percentage RE',
+              maximum: 100,
+              minimum: 0,
+            },
+            axisX: {
+              title: 'Year',
+              intervalType: 'year',
+              interval: 1,
+            },
+            toolTip: {
+              shared: true,
+            },
+            data: [
+              {
+                type: 'stackedArea',
+                showInLegend: true,
+                toolTipContent:
+                  '<span style="color:#9ed3f4"><strong>{name}: </strong></span> {y}',
+                name: 'Grid',
+                dataPoints: [
+                  { x: 2016, y: 15.34 },
+                  { x: 2017, y: 17.93 },
+                  { x: 2018, y: 18.39 },
+                  { x: 2019, y: 20.56 },
+                  { x: 2020, y: 20.23 },
+                ],
+              },
+              {
+                type: 'stackedArea',
+                name: 'Contracted Purchases',
+                toolTipContent:
+                  '<span style="color:#C0504E"><strong>{name}: </strong></span> {y}<br><b>Total:<b> #total',
+                showInLegend: true,
+                // color: "blue";
+                dataPoints: [
+                  { x: 2016, y: 45.38 },
+                  { x: 2017, y: 82.7 },
+                  { x: 2018, y: 81.61 },
+                  { x: 2019, y: 79.37 },
+                  { x: 2020, y: 79.77 },
+                ],
+              },
+            ],
+          }
+        )
+        var chartContainerAreaChartIBM = new CanvasJS.Chart(
+          'chartContainerAreaChartIBM',
+          {
+            animationEnabled: true,
+            title: {
+              text: 'Percent RE By Type IBM',
+            },
+            axisY: {
+              title: 'Percentage RE',
+              maximum: 100,
+              minimum: 0,
+            },
+            axisX: {
+              title: 'Year',
+              intervalType: 'year',
+              interval: 1,
+            },
+            toolTip: {
+              shared: true,
+            },
+            data: [
+              {
+                type: 'stackedArea',
+                showInLegend: true,
+                toolTipContent:
+                  '<span style="color:#4F81BC"><strong>{name}: </strong></span> {y}',
+                name: 'Grid',
+                dataPoints: [
+                  { x: 2016, y: 19.1 },
+                  { x: 2017, y: 18.5 },
+                  { x: 2018, y: 18.6 },
+                  { x: 2019, y: 22.0 },
+                  { x: 2020, y: 16.0 },
+                ],
+              },
+              {
+                type: 'stackedArea',
+                name: 'Contracted Purchases',
+                toolTipContent:
+                  '<span style="color:#C0504E"><strong>{name}: </strong></span> {y}<br><b>Total:<b> #total',
+                showInLegend: true,
+                // color: "blue";
+                dataPoints: [
+                  { x: 2016, y: 21.5 },
+                  { x: 2017, y: 22.9 },
+                  { x: 2018, y: 19.3 },
+                  { x: 2019, y: 25.0 },
+                  { x: 2020, y: 43.3 },
+                ],
+              },
+            ],
+          }
+        )
+        chartContainerTotalPercentRE.render()
+        chartContainerAreaChartGoogle.render()
+        chartContainerAreaChartIBM.render()
+
+        function toggleDataSeriesPercentRE(e) {
+          if (
+            typeof e.dataSeries.visible === 'undefined' ||
+            e.dataSeries.visible
+          ) {
+            e.dataSeries.visible = false
+          } else {
+            e.dataSeries.visible = true
+          }
+          chartContainerTotalPercentRE.render()
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div
+      id="chartContainerTotalPercentRE"
+      style="height: 300px; width: 100%; margin-top: 5rem; margin-bottom: 5rem"
+    ></div>
+    <div
+      id="chartContainerAreaChartGoogle"
+      style="height: 300px; width: 100%; margin-top: 5rem; margin-bottom: 5rem"
+    ></div>
+    <div
+      id="chartContainerAreaChartIBM"
+      style="height: 300px; width: 100%; margin-top: 5rem; margin-bottom: 5rem"
+    ></div>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  </body>
+</html>
